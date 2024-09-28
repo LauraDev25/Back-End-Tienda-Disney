@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+
+
+  body {
+    background-color: #f8f9fa;
+  } 
+  
+/* Estilo general del logo */
+.logo img {
+    width: 100%;  /* El logo ocupa todo el ancho disponible de su contenedor */
+    max-width: 200px; /* Limita el tamaño máximo del logo en pantallas grandes */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    margin-bottom: 20px; /* Espacio inferior */
+  }
+  
+  /* Ajuste para que el contenedor del logo se alinee a la izquierda */
+  .logo {
+    text-align: left; /* Alinea el contenido a la izquierda */
+    margin-left: 0;   /* Elimina márgenes negativos */
+    padding-left: 20px; /* Puedes ajustar esto para darle un poco de separación del borde izquierdo */
+  }
+  
+  /* Media queries para pantallas pequeñas (dispositivos móviles) */
+  @media (max-width: 768px) {
+    .logo img {
+      max-width: 150px; /* Logo más pequeño en tablets */
+      margin-bottom: 15px;
+    }
+  
+    .logo {
+      padding-left: 10px; /* Reduce el padding en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo img {
+      max-width: 120px; /* Logo más pequeño en móviles */
+      margin-bottom: 10px;
+    }
+  
+    .logo {
+      padding-left: 5px; /* Aún menos separación en pantallas pequeñas */
+    }
+  }
+
+
+
+  /* Estilo general del menú */
+#menu {
+    display: flex;       /* Flexbox para organizar los elementos en fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    padding: 0;
+    margin-left: 100px;
+    list-style: none;    /* Elimina las viñetas */
+    margin-top: -100px;       /* Elimina el margen superior */
+}
+
+/* Estilo para los elementos de la lista */
+#menu li {
+    padding: 0px 20px;
+    font-size: 20px;
+}
+
+/* Estilo para los enlaces */
+a {
+    color: rgb(96, 105, 235);
+    text-decoration: none;
+}
+
+/* Efecto hover en los enlaces */
+a:hover {
+    color: rgb(94, 236, 255);
+}
+
+/* Media queries para pantallas pequeñas (móviles y tablets) */
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;  /* Cambia la disposición del menú a vertical en pantallas pequeñas */
+        align-items: center;     /* Alinea los elementos al centro */
+    }
+
+    #menu li {
+        padding: 10px 0;        /* Ajusta el espaciado entre los elementos */
+        font-size: 18px;        /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    #menu li {
+        font-size: 16px;        /* Reduce aún más el tamaño de la fuente en móviles */
+    }
+}
+
+
+
+/* Estilo del ícono del carrito */
+.cart-icon {
+    position: fixed;      /* Mantiene el carrito siempre visible en la pantalla */
+    top: 135px;            /* Se ajusta a la parte superior de la pantalla */
+    right: 140px;          /* Se ajusta a la parte derecha de la pantalla */
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;        /* Asegura que esté sobre otros elementos */
+}
+
+/* Contador del carrito */
+.cart-icon #cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* Popup del carrito */
+.cart-popup {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    display: none;  /* Mantiene el popup oculto hasta que sea activado */
+    z-index: 1000;
+}
+
+/* Títulos y texto del carrito */
+.cart-popup h2 {
+    margin: 0;
+}
+
+.cart-popup ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-popup .cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Total del carrito */
+.cart-popup .total {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Botón de vaciar carrito */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;  /* Hace que el botón ocupe todo el ancho del contenedor */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .cart-icon {
+        font-size: 20px;   /* Ajusta el tamaño del ícono en pantallas más pequeñas */
+        right: 10px;       /* Reduce el margen derecho */
+    }
+
+    .cart-icon #cart-count {
+        font-size: 10px;   /* Reduce el tamaño del contador en pantallas más pequeñas */
+        padding: 2px 4px;
+    }
+
+    .cart-popup {
+        width: 250px;      /* Reduce el ancho del popup en pantallas medianas */
+        right: 10px;       /* Alinea el popup correctamente en pantallas más pequeñas */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-icon {
+        font-size: 18px;   /* Aún más pequeño en pantallas móviles */
+    }
+
+    .cart-popup {
+        width: 200px;      /* Ancho más reducido en móviles */
+        right: 5px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;   /* Reduce el tamaño del botón en pantallas móviles */
+    }
+}
+
+
+/* Ajustes generales */
+.Imagenes,
+.Imagenes2 {
+    padding: 20px;
+}
+
+/* Flexbox para las imágenes */
+.swiper-wrapper, 
+.swiper-wrapper2 {
+    display: flex;
+    overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Ajustes de cada producto */
+.Productos, 
+.Productos2 {
+    flex: 1 0 auto; /* Ajusta el tamaño de los productos dentro de la fila */
+    max-width: 420px; /* Máximo ancho de cada producto */
+    text-align: center; /* Centra el contenido */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+/* Imágenes responsive */
+.Productos img, 
+.Productos2 img {
+    width: 90%; /* Ocupa el 90% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Texto sobre las imágenes */
+.Prodctos-txt,
+.Prodctos2-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+/* Tamaño del texto */
+.Prodctos-txt h1, 
+.Prodctos2-txt h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .swiper-wrapper, 
+    .swiper-wrapper2 {
+        gap: 10px; /* Reduce el espacio entre los productos */
+    }
+
+    .Productos, 
+    .Productos2 {
+        max-width: 300px; /* Reduce el tamaño máximo de cada producto */
+    }
+
+    .Prodctos-txt h1, 
+    .Prodctos2-txt h1 {
+        font-size: 1.5em; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .Productos, 
+    .Productos2 {
+        max-width: 100%; /* Productos ocupan el 100% del ancho disponible */
+        flex: 0 0 100%; /* Cada producto ocupará toda la fila en pantallas pequeñas */
+    }
+
+    .Productos img, 
+    .Productos2 img {
+        width: 100%; /* La imagen ocupará el 100% del contenedor */
+    }
+
+    .Prodctos-txt h1, 
+    .Prodctos2-txt h1 {
+        font-size: 1.2em; /* Reduce el tamaño del texto en pantallas muy pequeñas */
+    }
+}
+
+
+
+.footer {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    justify-content: space-around; /* Distribuye el espacio entre los elementos */
+    padding: 20px;
+    background-color: #f8f9fa; /* Color de fondo opcional */
+  }
+  
+  .footer-txt, .ubicacion-txt, .contactanos-txt, .redes-txt {
+    flex: 1; /* Permite que cada sección crezca para llenar el espacio disponible */
+    padding: 10px;
+    min-width: 200px; /* Asegura que las columnas no se reduzcan demasiado */
+  }
+  
+  /* Estilo para las imágenes en el footer */
+  .footer img {
+    max-width: 70%; /* Ajusta el tamaño de la imagen para que no se desborde del contenedor */
+    height: auto;
+  }
+  
+  /* Estilos para los encabezados */
+  .footer h1, .footer h3 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para el contenido de texto */
+  .footer p {
+    margin: 5px 0;
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column; /* Coloca los elementos en una columna en pantallas más pequeñas */
+      align-items: center; /* Centra los elementos horizontalmente */
+    }
+  
+    .footer-txt, .ubicacion-txt, .contactanos-txt, .redes-txt {
+      text-align: center; /* Centra el texto en pantallas más pequeñas */
+      margin-bottom: 20px; /* Añade espacio entre las secciones */
+    }
+  }
