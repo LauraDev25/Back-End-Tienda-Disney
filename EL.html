@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ediciòn Limitada</title>
     <link rel="stylesheet" href="pi.css">
+
+    <script>
+        // Verifica si hay un token en localStorage
+        const token = localStorage.getItem('token');
+    
+        if (!token) {
+            // Si no hay token, redirige a la página de inicio de sesión
+            window.location.href = 'iniciar.html';
+        }
+    </script>
+    
 </head>
 <body>
 

@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  body {
+    background-color: #f8f9fa;
+  }
+
+/* Estilo general del logo */
+.logo img {
+    width: 100%;  /* El logo ocupa todo el ancho disponible de su contenedor */
+    max-width: 200px; /* Limita el tamaño máximo del logo en pantallas grandes */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    margin-bottom: 20px; /* Espacio inferior */
+  }
+  
+  /* Ajuste para que el contenedor del logo se alinee a la izquierda */
+  .logo {
+    text-align: left; /* Alinea el contenido a la izquierda */
+    margin-left: 0;   /* Elimina márgenes negativos */
+    padding-left: 20px; /* Puedes ajustar esto para darle un poco de separación del borde izquierdo */
+  }
+  
+  /* Media queries para pantallas pequeñas (dispositivos móviles) */
+  @media (max-width: 768px) {
+    .logo img {
+      max-width: 150px; /* Logo más pequeño en tablets */
+      margin-bottom: 15px;
+    }
+  
+    .logo {
+      padding-left: 10px; /* Reduce el padding en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo img {
+      max-width: 120px; /* Logo más pequeño en móviles */
+      margin-bottom: 10px;
+    }
+  
+    .logo {
+      padding-left: 5px; /* Aún menos separación en pantallas pequeñas */
+    }
+  }
+
+
+
+  /* Estilo general del menú */
+#menu {
+    display: flex;       /* Flexbox para organizar los elementos en fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    padding: 0;
+    margin-left: 100px;
+    list-style: none;    /* Elimina las viñetas */
+    margin-top: -100px;       /* Elimina el margen superior */
+}
+
+/* Estilo para los elementos de la lista */
+#menu li {
+    padding: 0px 20px;
+    font-size: 18px;
+}
+
+/* Estilo para los enlaces */
+a {
+    color: rgb(96, 105, 235);
+    text-decoration: none;
+}
+
+/* Efecto hover en los enlaces */
+a:hover {
+    color: rgb(94, 236, 255);
+}
+
+/* Media queries para pantallas pequeñas (móviles y tablets) */
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;  /* Cambia la disposición del menú a vertical en pantallas pequeñas */
+        align-items: center;     /* Alinea los elementos al centro */
+    }
+
+    #menu li {
+        padding: 10px 0;        /* Ajusta el espaciado entre los elementos */
+        font-size: 18px;        /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    #menu li {
+        font-size: 16px;        /* Reduce aún más el tamaño de la fuente en móviles */
+    }
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+p {
+    text-align: center;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
